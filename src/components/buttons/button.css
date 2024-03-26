@@ -1,0 +1,54 @@
+.btncos {
+    --color: #4f7c4c;
+    padding: 7px 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 12px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+   }
+   
+   .btncos::before, .btncos::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   
+   .btncos::before {
+    top: -1em;
+    left: -1em;
+   }
+   
+   .btncos::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   
+   .btncos:hover::before, .btncos:hover::after {
+    height: 410px;
+    width: 410px;
+   }
+   
+   .btncos:hover {
+    color: rgb(255, 255, 255);
+   }
+   
+   .btncos:active {
+    filter: brightness(.8);
+   }
+   
